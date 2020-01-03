@@ -34,7 +34,7 @@ b = a + 1
 a + b + (a * b)  # = 3 + 4 + (3 * 4) = 19
 
 # (= a b)
-a = b  # This is a boolean check
+a == b  # This is a boolean check
 # Results in "False"
 
 """
@@ -53,9 +53,9 @@ else:
       ((= b 4) (+ 6 7 a))
       (else 25))
 """
-if a = 4:  # False
+if a == 4:  # False
     return 6
-elif b = 4:  # True
+elif b == 4:  # True
     return 6 + 7 + a  # This is returned
 else:
     return 25  # This line does not run
