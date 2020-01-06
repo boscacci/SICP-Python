@@ -8,7 +8,7 @@
   ((if (> b 0) + -) a b))
 """
 
-"""Unfortunately in Python, I cannot return a "plus" sign, as far as I know.
+"""Unfortunately, in Python, we cannot return the addition operator.
 """
 
 # Python translation:
@@ -21,7 +21,7 @@ def a_plus_abs_b(a, b):
         return a - b
 
 
-# I.e.
+# I.e., for concision:
 
 
 def a_plus_abs_b_short(a, b):
@@ -29,3 +29,20 @@ def a_plus_abs_b_short(a, b):
 
 
 # a_plus_abs_b(3,4) returns the same as a_plus_abs_b(3,-4).
+
+# I.e., sort of more lispy:
+# Here we can simulate returning an add/subtract operator:
+def plus(x, y):
+    return x + y
+
+
+def minus(x, y):
+    return x - y
+
+
+def a_plus_abs_b_functional(x, y):
+    plus_or_minus = plus if y > 0 else minus
+    return plus_or_minus(x, y)
+
+
+# That does the same thing.
