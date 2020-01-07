@@ -4,9 +4,9 @@
 
 This project mainly refers to the following websites:
 
-[SICP Problem Set] (https://mitpress.mit.edu/sites/default/files/sicp/full-text/book/book.html)
+[SICP Problem Set](https://mitpress.mit.edu/sites/default/files/sicp/full-text/book/book.html)
 
-[sicp-solutions] (http://community.schemewiki.org/?sicp-solutions)
+[sicp-solutions](http://community.schemewiki.org/?sicp-solutions)
 
 You can see the answers in LISP scheme with detailed explanations there.
 
