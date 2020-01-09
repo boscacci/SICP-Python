@@ -56,14 +56,14 @@ and if n >= 3:
    (iter 0 1 2 n)) 
 """
 def func_iter(n, a=0, b=1, c=2):
+    print(n, a, b, c)
     if n == 0:
         return a
     else:
-        print(n, a, b, c)
-        return func_iter(n=n-1,
-                         a=b, 
-                         b=c, 
-                         c=(c + (2*b) + (3*a))
+        return func_iter(n = n - 1,
+                         a = b, 
+                         b = c, 
+                         c = c + (2*b) + (3*a)
                         )
 
 # I've just typed this out but still don't get it and am processing
