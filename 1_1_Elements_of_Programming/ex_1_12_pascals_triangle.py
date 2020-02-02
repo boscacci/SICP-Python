@@ -57,10 +57,14 @@ assert pascal(4) == [[1], [1, 1], [1, 2, 1], [1, 3, 3, 1]]
 
 
 def pascal_tri(r, c):
+    """Calculates the value of Pascal's Triangle at row r column c.
+    R and C are 1-indexed not zero-indexed.
+    """
     if c == 1 or c == r:
         return 1
     else:
         return pascal_tri(r - 1, c - 1) + pascal_tri(r - 1, c)
+
 
 assert pascal_tri(4, 3) == 3
 
