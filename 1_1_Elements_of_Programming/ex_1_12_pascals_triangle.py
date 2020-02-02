@@ -31,11 +31,10 @@ def make_new_layer(triangle):
     if last_layer == [1]:
         return [1, 1]
     else:
-        new_layer = []
+        new_layer = [1]
         for i in range(len(last_layer) - 1):
             new_element = last_layer[i] + last_layer[i + 1]
             new_layer.append(new_element)
-        new_layer.insert(0, 1)
         new_layer.append(1)
         return new_layer
 
@@ -59,6 +58,14 @@ assert pascal(4) == [[1], [1, 1], [1, 2, 1], [1, 3, 3, 1]]
 def pascal_tri(r, c):
     """Calculates the value of Pascal's Triangle at row r column c.
     R and C are 1-indexed not zero-indexed.
+
+    1  
+    1 1 
+    1 2 1 
+    1 3 3 1 
+    1 4 6 4 1
+    1 5 10 10 5 1
+
     """
     if c == 1 or c == r:
         return 1
