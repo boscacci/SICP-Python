@@ -14,7 +14,7 @@ triangle is the sum of the two numbers above it. Write a procedure that computes
 elements of Pascal's triangle by means of a recursive process.
 """
 
-# My original answer:
+# My original answer, which just returns a whole big triangle:
 def pascal(counter, triangle=None):
     if triangle == None:
         triangle = [[1]]
@@ -42,7 +42,7 @@ def make_new_layer(triangle):
 assert pascal(1) == [[1]]
 assert pascal(4) == [[1], [1, 1], [1, 2, 1], [1, 3, 3, 1]]
 
-# Real answer in Lisp:
+# Proper answer, in Lisp:
 
 """
  (define (pascal r c) 
@@ -52,7 +52,7 @@ assert pascal(4) == [[1], [1, 1], [1, 2, 1], [1, 3, 3, 1]]
 """
 
 # Python translation:
-# I guess the question was just asking for "elements" and not the whole triangle.
+# The question was just asking for "elements," not the whole triangle.
 
 
 def pascal_tri(r, c):
