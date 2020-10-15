@@ -74,9 +74,6 @@ def sqrt_alt(x, guess=1, delta=1):
     if delta < (guess / 1000):
         return guess
     else:
-        ret = sqrt_alt(
-            x=x,
-            guess=make_better_guess(x, guess),
-            delta=abs(guess - make_better_guess(x, guess))
-        )
+        new_guess = make_better_guess(x, guess)
+        ret = sqrt_alt(x=x, guess=new_guess, delta=abs(guess - new_guess))
         return ret

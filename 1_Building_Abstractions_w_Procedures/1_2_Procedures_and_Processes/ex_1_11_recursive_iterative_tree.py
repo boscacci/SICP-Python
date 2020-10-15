@@ -26,14 +26,14 @@ Consider the iterative method of getting the fibonacci sequence:
 """
 
 
-def fib(n, a=1, b=0):
+def fib(n, a=0, b=1):
     """Gets the fibonacci sequence:"""
     if n == 0:
-        return b
+        return a
     else:
-        prev = a
+        prev = b
         nex = a + b
-        return fib(n - 1, nex, prev)
+        return fib(n - 1, a=prev, b=nex)
 
 
 # Now again, write a procedure that computes f by means of an iterative process.
@@ -52,11 +52,11 @@ def func_iter(n, a=0, b=1, c=2):
     if n == 0:
         return a
     else:
-        n = n - 1
-        p = b
-        q = c
-        r = c + (2 * b) + (3 * a)
-        return func_iter(n, a=p, b=q, c=r)
+        n -= 1
+        alpha = b
+        beta = c
+        chi = c + (2 * b) + (3 * a)
+        return func_iter(n, a=alpha, b=beta, c=chi)
 
 
 # I've just translated from LISP but am still struggling to get it.
