@@ -49,7 +49,7 @@ def are_congruent(a, b, n):
     return True if left == right else False
 
 
-def power_fermat(n, iterations=1000):
+def power_fermat(n, iterations=30):
     """Runs fermat test a few times; even one failure means not prime"""
     for _ in range(iterations):
         if not fermat_test(n):

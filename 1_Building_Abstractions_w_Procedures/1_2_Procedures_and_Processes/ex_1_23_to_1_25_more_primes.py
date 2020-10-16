@@ -1,0 +1,1 @@
+from ex_1_21_to_1_22_primes import power_fermat
