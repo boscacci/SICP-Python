@@ -2,7 +2,8 @@ from math import sqrt
 
 
 def euclid_gcd(a, b):
-    """Find the Greatest common divisor of p and q by euclid's
+    """
+    Find the Greatest common divisor of p and q by euclid's
     f(n) = O(log(n))
     """
     if b == 0:
@@ -76,12 +77,11 @@ the test:
 
 def timed_prime_test(n):
     from time import time
-
     # print(f"n: {n};")
     start_time = time()
     if is_prime(n):
         dur = time() - start_time
-        print(f"*** Dur: {dur}")
+        print(f"*** Dur: {dur:.7f}")
         return True
     return False
 
@@ -108,4 +108,5 @@ def search_for_primes(p, q):
 
 search_for_primes(1000, 3000)
 search_for_primes(10_000, 15_000)
-search_for_primes(1_000_000, 1_100_000)
+# search_for_primes(1_000_000, 1_100_000)
+
