@@ -77,6 +77,7 @@ the test:
 
 def timed_prime_test(n):
     from time import time
+
     # print(f"n: {n};")
     start_time = time()
     if is_prime(n):
@@ -106,7 +107,14 @@ def search_for_primes(p, q):
     return primes
 
 
-search_for_primes(1000, 3000)
-search_for_primes(10_000, 15_000)
+# search_for_primes(10_000, 20_000)
+# search_for_primes(100_000, 150_000)
 # search_for_primes(1_000_000, 1_100_000)
 
+"""
+From our timing data, we can observe that, when increasing the tested 
+number of a factor 10, the required time increases roughly of 
+a factor 3. By noting that 3 ≅ √10, we can confirm both the growth 
+prediction and the notion that programs run in a time proportional to 
+the steps required for the computation.
+"""
